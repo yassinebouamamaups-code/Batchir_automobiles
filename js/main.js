@@ -79,6 +79,39 @@ loadCars();
 CHARGER PAGE VEHICULE
 ========================= */
 
+// async function loadVehicle(){
+
+// const params = new URLSearchParams(window.location.search);
+// const carId = params.get("id");
+
+// if(!carId) return;
+
+// const response = await fetch("data/vehicles.json");
+// const cars = await response.json();
+
+// const car = cars.find(c => c.id === carId);
+
+// if(!car) return;
+
+// document.getElementById("carTitle").textContent = car.brand + " " + car.model;
+
+// document.getElementById("carPrice").textContent = car.price + " €";
+
+// document.getElementById("carYear").textContent = car.year;
+
+// document.getElementById("carKm").textContent = car.km + " km";
+
+// document.getElementById("carGearbox").textContent = car.gearbox;
+
+// document.getElementById("carFuel").textContent = car.fuel;
+
+// document.getElementById("mainPhoto").src =
+// car.images ? car.images[0] : "vehicles/default.jpg";
+
+// }
+
+// loadVehicle();
+
 async function loadVehicle(){
 
 const params = new URLSearchParams(window.location.search);
@@ -93,21 +126,52 @@ const car = cars.find(c => c.id === carId);
 
 if(!car) return;
 
-document.getElementById("carTitle").textContent = car.brand + " " + car.model;
+/* titre page */
 
-document.getElementById("carPrice").textContent = car.price + " €";
+document.getElementById("pageTitle").textContent =
+car.brand + " " + car.model + " - Batchir Automobiles";
+
+/* infos */
+
+document.getElementById("carTitle").textContent =
+car.brand + " " + car.model;
+
+document.getElementById("carPrice").textContent =
+car.price + " €";
 
 document.getElementById("carYear").textContent = car.year;
 
-document.getElementById("carKm").textContent = car.km + " km";
+document.getElementById("carKm").textContent =
+car.km + " km";
 
-document.getElementById("carGearbox").textContent = car.gearbox;
+document.getElementById("carGearbox").textContent =
+car.gearbox;
 
-document.getElementById("carFuel").textContent = car.fuel;
+document.getElementById("carFuel").textContent =
+car.fuel;
 
-document.getElementById("mainPhoto").src =
-car.images ? car.images[0] : "vehicles/default.jpg";
+/* photo principale */
+
+const mainPhoto = document.getElementById("mainPhoto");
+mainPhoto.src = car.images[0];
+
+/* miniatures */
+
+const thumbnails = document.getElementById("thumbnails");
+thumbnails.innerHTML = "";
+
+car.images.forEach(img => {
+
+const thumb = document.createElement("img");
+
+thumb.src = img;
+
+thumb.onclick = () => {
+mainPhoto.src = img;
+};
+
+thumbnails.appendChild(thumb);
+
+});
 
 }
-
-loadVehicle();

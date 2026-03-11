@@ -295,6 +295,8 @@ border-radius:10px;
 .vehicle-thumbnails{
 display:flex;
 gap:10px;
+margin-top:15px;
+flex-wrap:wrap;
 }
 
 .vehicle-thumbnails img{
@@ -305,11 +307,13 @@ border-radius:6px;
 cursor:pointer;
 opacity:0.8;
 transition:0.2s;
+border:2px solid transparent;
 }
 
 .vehicle-thumbnails img:hover{
 opacity:1;
 transform:scale(1.05);
+border-color:#d4af37;
 }
 
 .vehicle-info{

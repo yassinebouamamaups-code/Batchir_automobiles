@@ -1,6 +1,7 @@
 *{
 box-sizing:border-box;
 }
+
 /* =========================
 BODY
 ========================= */
@@ -12,22 +13,9 @@ background:#111;
 color:white;
 }
 
-
 /* =========================
 HEADER
 ========================= */
-
-/* header{
-position:sticky;
-top:0;
-display:flex;
-align-items:center;
-justify-content:flex-end;
-padding:20px 60px;
-background:black;
-min-height:160px;
-z-index:1000;
-} */
 
 header{
 position:sticky;
@@ -41,9 +29,8 @@ height:160px;
 z-index:1000;
 }
 
-
 /* =========================
-LOGO CENTRÉ
+LOGO
 ========================= */
 
 .logo{
@@ -56,7 +43,6 @@ transform:translateX(-50%);
 height:135px;
 }
 
-
 /* =========================
 MENU
 ========================= */
@@ -64,9 +50,6 @@ MENU
 .menu-tools{
 position:relative;
 }
-
-
-/* bouton hamburger */
 
 .hamburger{
 background:#d4af37;
@@ -82,9 +65,6 @@ gap:6px;
 cursor:pointer;
 }
 
-
-/* barres */
-
 .hamburger span{
 width:22px;
 height:3px;
@@ -92,9 +72,6 @@ background:black;
 border-radius:2px;
 transition:0.3s;
 }
-
-
-/* animation */
 
 .hamburger.active span:nth-child(1){
 transform:rotate(45deg) translate(5px,5px);
@@ -107,7 +84,6 @@ opacity:0;
 .hamburger.active span:nth-child(3){
 transform:rotate(-45deg) translate(5px,-5px);
 }
-
 
 /* =========================
 MENU PANEL
@@ -151,15 +127,9 @@ background:#d4af37;
 color:black;
 }
 
-
-/* =========================
-ICONS
-========================= */
-
 .icon{
 font-size:18px;
 }
-
 
 /* =========================
 HERO
@@ -170,7 +140,7 @@ text-align:center;
 padding:140px 20px;
 background-image:url("../images/fond.jpeg");
 background-size:cover;
-background-position:center 150%; 
+background-position:center 150%;
 background-repeat:no-repeat;
 position:relative;
 min-height:70vh;
@@ -200,7 +170,6 @@ position:relative;
 z-index:1;
 }
 
-
 /* =========================
 BOUTONS
 ========================= */
@@ -214,27 +183,6 @@ font-weight:bold;
 border-radius:6px;
 display:inline-block;
 }
-
-
-/* =========================
-FEATURES
-========================= */
-
-/* .features{
-display:flex;
-justify-content:center;
-gap:50px;
-padding:70px;
-flex-wrap:wrap;
-}
-
-.feature{
-background:#1c1c1c;
-padding:35px;
-border-radius:10px;
-width:260px;
-text-align:center;
-} */
 
 /* =========================
 FEATURES
@@ -298,11 +246,12 @@ margin-top:50px;
 background:#1c1c1c;
 padding:25px;
 border-radius:10px;
+text-align:center;
 }
 
 .car img{
 width:100%;
-max-width:240px;
+max-width:220px;
 height:auto;
 display:block;
 margin:0 auto 10px auto;
@@ -313,12 +262,7 @@ border-radius:6px;
 color:#d4af37;
 font-size:22px;
 font-weight:bold;
-width:100%;
-max-width:260px;
-margin:auto;
-display:block;
 }
-
 
 /* =========================
 PAGE VEHICULE
@@ -329,28 +273,48 @@ display:flex;
 gap:80px;
 padding:80px;
 flex-wrap:wrap;
+align-items:flex-start;
 }
 
 .vehicle-gallery{
 flex:1;
 display:flex;
-justify-content:center;
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.vehicle-gallery #mainPhoto{
+width:100%;
+max-width:420px;
+height:300px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.vehicle-thumbnails{
+display:flex;
+gap:10px;
+}
+
+.vehicle-thumbnails img{
+width:70px;
+height:60px;
+object-fit:cover;
+border-radius:6px;
+cursor:pointer;
+opacity:0.8;
+transition:0.2s;
+}
+
+.vehicle-thumbnails img:hover{
+opacity:1;
+transform:scale(1.05);
 }
 
 .vehicle-info{
 flex:1;
 max-width:420px;
-}
-/* .vehicle-gallery img{
-width:380px;
-max-width: 100%;
-border-radius:10px;
-} */
-.vehicle-gallery img{
-width:100%;
-max-width:420px;
-height:auto;
-border-radius:10px;
 }
 
 /* =========================
@@ -363,7 +327,6 @@ padding:30px;
 background:#000;
 margin-top:60px;
 }
-
 
 /* =========================
 BOUTONS FLOTTANTS
@@ -410,7 +373,6 @@ transition:0.3s;
 .whatsapp-button:hover{
 transform:scale(1.1);
 }
-
 
 /* =========================
 CONTACT PAGE
@@ -462,7 +424,6 @@ border:none;
 border-radius:5px;
 }
 
-
 /* =========================
 GOOGLE REVIEWS
 ========================= */
@@ -486,17 +447,6 @@ overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-.review-link{
-margin-top:20px;
-}
-
-.review-link a{
-color:#d4af37;
-text-decoration:none;
-font-weight:bold;
-}
-
-
 /* =========================
 MOBILE
 ========================= */
@@ -505,54 +455,29 @@ MOBILE
 
 header{
 padding:15px 20px;
+height:120px;
 }
 
 .logo img{
 height:90px;
 }
 
-.menu-tools{
-right:20px;
-}
-
-/* .hero{
-padding:80px 20px;
-} */
-
-/* .hero{
-padding:100px 20px;
-background-position:center 5%;
-min-height:60vh;
-background-size:cover;
-} */
- .hero{
+.hero{
 padding:100px 20px;
 min-height:60vh;
 background-position:center top;
-background-size:cover;
 }
 
 .hero h1{
 font-size:28px;
 }
 
-/* .features{
-flex-direction:column;
-align-items:center;
-gap:20px;
-padding:40px 15px;
-} */
 .features{
 flex-direction:column;
 align-items:center;
 gap:20px;
 padding:40px 10px;
-margin:0;
 }
-/* .feature{
-width:100%;
-max-width:320px;
-} */
 
 .feature{
 width:100%;
@@ -561,52 +486,18 @@ margin:auto;
 border:1px solid #d4af37;
 box-shadow:0 6px 15px rgba(0,0,0,0.3);
 }
-}
 
 .vehicle{
 flex-direction:column;
 padding:40px 20px;
 }
 
-.vehicle-gallery img{
-width:100%;
+.vehicle-gallery #mainPhoto{
+height:250px;
 }
+
 body{
 overflow-x:hidden;
 }
 
-.vehicle-gallery{
-flex:1;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-}
-
-.vehicle-gallery #mainPhoto{
-width:100%;
-max-width:420px;
-height:300px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.vehicle-thumbnails{
-display:flex;
-gap:10px;
-}
-
-.vehicle-thumbnails img{
-width:70px;
-height:60px;
-object-fit:cover;
-border-radius:6px;
-cursor:pointer;
-opacity:0.8;
-transition:0.2s;
-}
-
-.vehicle-thumbnails img:hover{
-opacity:1;
-transform:scale(1.05);
 }

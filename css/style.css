@@ -352,3 +352,58 @@ padding:10px;
 border:none;
 border-radius:5px;
 }
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+header{
+padding:15px 20px;
+}
+
+.logo img{
+height:90px;
+}
+
+.menu-tools{
+right:20px;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+/* FEATURES */
+
+.features{
+flex-direction:column;
+align-items:center;
+gap:20px;
+padding:40px 20px;
+}
+
+.feature{
+width:100%;
+max-width:320px;
+}
+
+/* VEHICLE PAGE */
+
+.vehicle{
+flex-direction:column;
+padding:40px 20px;
+}
+
+.vehicle-gallery img{
+width:100%;
+}
+
+}

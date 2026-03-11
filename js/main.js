@@ -126,11 +126,6 @@ const car = cars.find(c => c.id === carId);
 
 if(!car) return;
 
-/* titre page */
-
-document.getElementById("pageTitle").textContent =
-car.brand + " " + car.model + " - Batchir Automobiles";
-
 /* infos */
 
 document.getElementById("carTitle").textContent =
@@ -139,7 +134,8 @@ car.brand + " " + car.model;
 document.getElementById("carPrice").textContent =
 car.price + " €";
 
-document.getElementById("carYear").textContent = car.year;
+document.getElementById("carYear").textContent =
+car.year;
 
 document.getElementById("carKm").textContent =
 car.km + " km";
@@ -165,13 +161,18 @@ car.images.forEach(img => {
 const thumb = document.createElement("img");
 
 thumb.src = img;
+thumb.alt = "photo véhicule";
 
-thumb.onclick = () => {
+thumb.addEventListener("click", () => {
+
 mainPhoto.src = img;
-};
+
+});
 
 thumbnails.appendChild(thumb);
 
 });
 
 }
+
+loadVehicle();

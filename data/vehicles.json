@@ -8,7 +8,7 @@
     "price": 21900,
     "fuel": "Diesel",
     "gearbox": "Automatique",
-    "image": "vehicles/vehicle1_face.jpg"
+    "image": ["vehicles/vehicle1_face.jpg"]
   },
 
   {
@@ -20,7 +20,7 @@
     "price": 19900,
     "fuel": "Diesel",
     "gearbox": "Manuelle",
-    "image": "vehicles/vehicle2.jpg"
+    "image": ["vehicles/vehicle1_face.jpg"]
   },
 
   {
@@ -32,6 +32,6 @@
     "price": 28900,
     "fuel": "Diesel",
     "gearbox": "Automatique",
-    "image": "vehicles/vehicle3.jpg"
+    "image": ["vehicles/vehicle1_face.jpg"]
   }
 ]

@@ -2,7 +2,10 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Batchir Automobiles</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -15,20 +18,24 @@
 <header>
 
 <div class="logo">
+<a href="index.html">
 <img src="images/logo.jpg" alt="Batchir Automobiles">
+</a>
 </div>
 
 <div class="menu-tools">
 
-<button id="menuButton">
+<button id="menuButton" class="hamburger" aria-label="Ouvrir le menu">
 
-<span class="menu-icon">🔧</span>
+<span></span>
+<span></span>
+<span></span>
 
 </button>
 
-<div id="menuPanel">
+<nav id="menuPanel">
 
-<a href="index.html">
+<a href="index.html" class="active">
 <span class="icon">🏠</span> Accueil
 </a>
 
@@ -36,28 +43,31 @@
 <span class="icon">🚗</span> Catalogue
 </a>
 
-<a href="devis.html">
+<a href="#">
 <span class="icon">🔧</span> Devis mécanique
 </a>
 
-<a href="#">
+<a href="contact.html">
 <span class="icon">📞</span> Contact
 </a>
 
-</div>
+</nav>
 
 </div>
 
 </header>
 
+
+<main>
+
 <section class="hero">
 
-<h1>Batchir Automobiles</h1>
-<p>Spécialiste véhicules d'occasion</p>
+<h1>Spécialiste véhicules d'occasion</h1>
 
 <a class="btn" href="catalog.html">Voir le catalogue</a>
 
 </section>
+
 
 <section class="features">
 
@@ -83,11 +93,39 @@
 
 </section>
 
+</main>
+
+
 <footer>
 
 <p>© 2023 Batchir Automobiles</p>
 
 </footer>
+
+
+<div class="floating-buttons">
+
+<a href="tel:+33635277652" class="call-button" aria-label="Appeler">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24">
+<path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.7 22 2 13.3 2 2c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
+</svg>
+
+</a>
+
+
+<a href="https://wa.me/33635277652" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28">
+
+<path fill="white"
+d="M16.04 2C8.86 2 3 7.86 3 15.04c0 2.65.69 5.25 2.02 7.53L3 30l7.63-1.99A12.97 12.97 0 0016.04 28C23.22 28 29 22.14 29 14.96S23.22 2 16.04 2zm0 23.54c-2.28 0-4.5-.61-6.44-1.75l-.46-.27-4.52 1.18 1.2-4.41-.3-.46a10.47 10.47 0 01-1.63-5.57c0-5.78 4.7-10.48 10.48-10.48s10.48 4.7 10.48 10.48-4.7 10.48-10.48 10.48z"/>
+
+</svg>
+
+</a>
+
+</div>
 
 </body>
 </html>

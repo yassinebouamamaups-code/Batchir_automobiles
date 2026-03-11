@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<title>BMW Série 3</title>
+
+<title>BMW Série 3 - Batchir Automobiles</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<script defer src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -11,22 +18,44 @@
 <header>
 
 <div class="logo">
-<img src="images/logo.jpg">
+<a href="index.html">
+<img src="images/logo.jpg" alt="Batchir Automobiles">
+</a>
 </div>
 
-<nav>
-<ul>
-<li><a href="index.html">Accueil</a></li>
-<li><a href="catalog.html">Catalogue</a></li>
-</ul>
+<div class="menu-tools">
+
+<button id="menuButton" class="hamburger" aria-label="Menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+<nav id="menuPanel">
+
+<a href="index.html"><span class="icon">🏠</span> Accueil</a>
+
+<a href="catalog.html" class="active"><span class="icon">🚗</span> Catalogue</a>
+
+<a href="devis.html"><span class="icon">🔧</span> Devis mécanique</a>
+
+<a href="contact.html"><span class="icon">📞</span> Contact</a>
+
 </nav>
 
+</div>
+
 </header>
+
 
 <section class="vehicle">
 
 <div class="vehicle-gallery">
-<img src="vehicles/vehicle1.jpg">
+
+<img src="vehicles/vehicle1.jpg" alt="BMW Série 3">
+
 </div>
 
 <div class="vehicle-info">
@@ -36,17 +65,32 @@
 <p class="price">21 900 €</p>
 
 <ul>
-<li>Année : 2019</li>
-<li>Kilométrage : 120 000 km</li>
-<li>Boite : Automatique</li>
-<li>Carburant : Diesel</li>
+
+<li><strong>Année :</strong> 2019</li>
+
+<li><strong>Kilométrage :</strong> 120 000 km</li>
+
+<li><strong>Boîte :</strong> Automatique</li>
+
+<li><strong>Carburant :</strong> Diesel</li>
+
 </ul>
 
-<a class="btn">Contacter</a>
+<a href="https://wa.me/33635277652" class="btn">Contacter sur WhatsApp</a>
 
 </div>
 
 </section>
+
+
+<a href="https://wa.me/33635277652" class="whatsapp-button" target="_blank">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+<path d="M12 2A10 10 0 0 0 3.5 17.5L2 22l4.6-1.4A10 10 0 1 0 12 2z"/>
+</svg>
+
+</a>
+
 
 </body>
 </html>

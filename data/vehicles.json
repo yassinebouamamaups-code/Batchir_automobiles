@@ -1,0 +1,37 @@
+[
+  {
+    "id": "bmw-serie-3",
+    "brand": "BMW",
+    "model": "Série 3",
+    "year": 2019,
+    "km": 120000,
+    "price": 21900,
+    "fuel": "Diesel",
+    "gearbox": "Automatique",
+    "image": "vehicles/vehicle1_face.jpg"
+  },
+
+  {
+    "id": "audi-a4",
+    "brand": "Audi",
+    "model": "A4",
+    "year": 2018,
+    "km": 98000,
+    "price": 19900,
+    "fuel": "Diesel",
+    "gearbox": "Manuelle",
+    "image": "vehicles/vehicle2.jpg"
+  },
+
+  {
+    "id": "mercedes-classe-c",
+    "brand": "Mercedes",
+    "model": "Classe C",
+    "year": 2020,
+    "km": 65000,
+    "price": 28900,
+    "fuel": "Diesel",
+    "gearbox": "Automatique",
+    "image": "vehicles/vehicle3.jpg"
+  }
+]

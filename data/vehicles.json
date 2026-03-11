@@ -8,7 +8,10 @@
     "price": 21900,
     "fuel": "Diesel",
     "gearbox": "Automatique",
-    "images": ["vehicles/vehicle1_face.jpg"]
+    "images": ["vehicles/vehicle1_face.jpg",
+                 "vehicles/vehicle1_dos.jpg",
+                "vehicles/vehicle1_profil.jpg",
+                "vehicles/vehicle1_route.jpg"  ]
   },
 
   {

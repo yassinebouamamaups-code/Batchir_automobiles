@@ -72,3 +72,9 @@ kmFilter.addEventListener("change", filterCars);
 }
 
 });
+
+function changePhoto(element){
+
+document.getElementById("mainPhoto").src = element.src;
+
+}

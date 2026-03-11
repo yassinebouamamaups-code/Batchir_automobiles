@@ -94,7 +94,9 @@ Lundi - Samedi<br>
 <textarea name="message" placeholder="Votre message..." required></textarea>
 <input type="hidden" name="_next" value="https://yassinebouamamaups-code.github.io/Batchir_automobiles/Merci.html">
 <button type="submit" class="btn">Envoyer</button>
-
+<p style="font-size:14px;color:#aaa;margin-top:10px;">
+Nous vous répondrons généralement sous 24h-48h.
+</p>
 </form>
 
 </div>
@@ -130,6 +132,16 @@ Lundi - Samedi<br>
 </a>
 </div>
 
+<!-- Vider le formulaire  -->
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", () => {
+setTimeout(() => {
+form.reset();
+}, 1000);
+});
+</script>
 
 </body>
 </html>

@@ -473,8 +473,13 @@ height:90px;
 right:20px;
 }
 
-.hero{
+/* .hero{
 padding:80px 20px;
+} */
+
+.hero{
+padding:100px 20px;
+background-position:center 30%;
 }
 
 .hero h1{
@@ -485,7 +490,7 @@ font-size:28px;
 flex-direction:column;
 align-items:center;
 gap:20px;
-padding:40px 20px;
+padding:40px 15px;
 }
 
 .feature{
@@ -501,5 +506,7 @@ padding:40px 20px;
 .vehicle-gallery img{
 width:100%;
 }
-
+body{
+overflow-x:hidden;
+}
 }

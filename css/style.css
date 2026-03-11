@@ -154,18 +154,19 @@ HERO
 text-align:center;
 padding:140px 20px;
 
-background-image: url("../images/fond.jpeg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+background-image:url("../images/fond.jpeg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 
-position: relative;
+position:relative;
 }
 
 .hero h1{
 font-size:48px;
 margin-bottom:20px;
 }
+
 .hero::before{
 content:"";
 position:absolute;
@@ -180,6 +181,7 @@ background:rgba(0,0,0,0.5);
 position:relative;
 z-index:1;
 }
+
 
 /* =========================
 BOUTONS
@@ -326,6 +328,11 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
+
+/* =========================
+CONTACT PAGE
+========================= */
+
 .contact-page{
 padding:80px 20px;
 text-align:center;
@@ -372,11 +379,46 @@ border:none;
 border-radius:5px;
 }
 
+
+/* =========================
+GOOGLE REVIEWS
+========================= */
+
+.google-reviews{
+text-align:center;
+padding:80px 20px;
+background:#1a1a1a;
+}
+
+.google-reviews h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.map-container{
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.review-link{
+margin-top:20px;
+}
+
+.review-link a{
+color:#d4af37;
+text-decoration:none;
+font-weight:bold;
+}
+
+
 /* =========================
 MOBILE
 ========================= */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
 header{
 padding:15px 20px;
@@ -390,32 +432,13 @@ height:90px;
 right:20px;
 }
 
-/* HERO */
-
 .hero{
-text-align:center;
 padding:80px 20px;
-
+}
 
 .hero h1{
 font-size:28px;
 }
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-}
-
-.hero *{
-position:relative;
-z-index:1;
-}
-/* FEATURES */
 
 .features{
 flex-direction:column;
@@ -428,8 +451,6 @@ padding:40px 20px;
 width:100%;
 max-width:320px;
 }
-
-/* VEHICLE PAGE */
 
 .vehicle{
 flex-direction:column;

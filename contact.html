@@ -78,12 +78,10 @@ N'hésitez pas à nous contacter.</p>
 Lundi - Samedi<br>
 9h00 - 19h00</p>
 
-</div>
-
-
 <div class="contact-form">
 
 <h2>Formulaire de contact</h2>
+
 <form action="https://formsubmit.co/yassine.bouamama.ups@gmail.com" method="POST">
 
 <input type="text" name="name" placeholder="Nom" required>
@@ -93,6 +91,13 @@ Lundi - Samedi<br>
 <input type="tel" name="phone" placeholder="Téléphone">
 
 <textarea name="message" placeholder="Votre message..." required></textarea>
+
+<!-- configuration FormSubmit -->
+
+<input type="hidden" name="_next" value="merci.html">
+<input type="hidden" name="_subject" value="Nouveau message depuis Batchir Automobiles">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
 
 <button type="submit" class="btn">Envoyer</button>
 

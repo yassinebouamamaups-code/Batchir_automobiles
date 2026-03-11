@@ -485,7 +485,7 @@ padding:80px 20px;
 
 .hero{
 padding:100px 20px;
-background-position:center top;
+background-position:center 5%;
 min-height:60vh;
 background-size:cover;
 }
@@ -516,6 +516,9 @@ max-width:320px;
 width:100%;
 max-width:300px;
 margin:auto;
+border:1px solid #d4af37;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
 }
 
 .vehicle{

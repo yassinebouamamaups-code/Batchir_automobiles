@@ -53,7 +53,7 @@ container.innerHTML += `
 
 <div class="car">
 
-<img src="${car.images[0]}" alt="${car.brand} ${car.model}">
+<img src="${car.images ? car.images[0] : 'vehicles/default.jpg'}" alt="${car.brand} ${car.model}">
 
 <h3>${car.brand} ${car.model}</h3>
 
@@ -105,7 +105,8 @@ document.getElementById("carGearbox").textContent = car.gearbox;
 
 document.getElementById("carFuel").textContent = car.fuel;
 
-document.getElementById("mainPhoto").src = car.images[0];
+document.getElementById("mainPhoto").src =
+car.images ? car.images[0] : "vehicles/default.jpg";
 
 }
 

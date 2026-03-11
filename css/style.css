@@ -1,0 +1,248 @@
+body{
+font-family: Arial;
+margin:0;
+background:#111;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 70px;
+background:black;
+}
+
+.logo img{
+height:110px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:40px;
+}
+
+nav a{
+text-decoration:none;
+color:#d4af37;
+font-weight:bold;
+font-size:18px;
+}
+
+.hero{
+text-align:center;
+padding:140px 20px;
+background:#1a1a1a;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+padding:14px 30px;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+}
+
+.features{
+display:flex;
+justify-content:center;
+gap:50px;
+padding:70px;
+}
+
+.feature{
+background:#1c1c1c;
+padding:35px;
+border-radius:10px;
+width:260px;
+}
+
+.catalog{
+padding:70px;
+text-align:center;
+}
+
+.cars{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+margin-top:50px;
+}
+
+.car{
+background:#1c1c1c;
+padding:25px;
+border-radius:10px;
+}
+
+.car img{
+width:100%;
+border-radius:6px;
+}
+
+.price{
+color:#d4af37;
+font-size:22px;
+font-weight:bold;
+}
+
+.vehicle{
+display:flex;
+gap:80px;
+padding:80px;
+}
+
+.vehicle-gallery img{
+width:520px;
+border-radius:10px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 60px;
+background:black;
+}
+
+.logo img{
+height:90px;
+}
+
+.menu-tools{
+position:relative;
+}
+
+#menuButton{
+background:#d4af37;
+border:none;
+font-size:22px;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.tool{
+margin:0 2px;
+}
+
+#menuPanel{
+position:absolute;
+right:0;
+top:50px;
+background:#1c1c1c;
+border-radius:8px;
+display:none;
+flex-direction:column;
+min-width:160px;
+}
+
+#menuPanel a{
+padding:12px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid #333;
+}
+
+#menuPanel a:hover{
+background:#d4af37;
+color:black;
+}
+#menuPanel{
+display:none;
+flex-direction:column;
+}
+
+#menuPanel.open{
+display:flex;
+}
+
+.icon{
+margin-right:8px;
+font-size:18px;
+}
+
+.menu-tools{
+position:relative;
+}
+
+/* bouton menu */
+
+#menuButton{
+background:#d4af37;
+border:none;
+width:55px;
+height:55px;
+border-radius:8px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+}
+
+/* icone clé */
+
+.menu-icon{
+font-size:26px;
+transition:0.4s;
+}
+
+/* rotation quand ouvert */
+
+#menuButton.active .menu-icon{
+transform:rotate(90deg);
+}
+
+/* panneau menu */
+
+#menuPanel{
+position:absolute;
+right:0;
+top:65px;
+background:#1c1c1c;
+border-radius:10px;
+display:flex;
+flex-direction:column;
+min-width:190px;
+max-height:0;
+overflow:hidden;
+transition:max-height 0.35s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* menu ouvert */
+
+#menuPanel.open{
+max-height:300px;
+}
+
+/* liens */
+
+#menuPanel a{
+padding:14px 18px;
+text-decoration:none;
+color:white;
+display:flex;
+align-items:center;
+gap:10px;
+border-bottom:1px solid #333;
+}
+
+#menuPanel a:hover{
+background:#d4af37;
+color:black;
+}
+
+/* icones */
+
+.icon{
+font-size:18px;
+}

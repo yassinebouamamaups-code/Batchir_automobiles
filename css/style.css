@@ -156,7 +156,7 @@ padding:140px 20px;
 
 background-image:url("../images/fond.jpeg");
 background-size:cover;
-background-position:center;
+background-position:center 150%;
 background-repeat:no-repeat;
 
 position:relative;
@@ -202,7 +202,7 @@ display:inline-block;
 FEATURES
 ========================= */
 
-.features{
+/* .features{
 display:flex;
 justify-content:center;
 gap:50px;
@@ -216,8 +216,49 @@ padding:35px;
 border-radius:10px;
 width:260px;
 text-align:center;
+} */
+
+/* =========================
+FEATURES
+========================= */
+
+.features{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:80px 20px;
+flex-wrap:wrap;
 }
 
+.feature{
+background:#1c1c1c;
+padding:40px 30px;
+border-radius:12px;
+width:260px;
+text-align:center;
+transition:0.3s;
+border:1px solid #222;
+}
+
+.feature:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+border:1px solid #d4af37;
+}
+
+.feature-icon{
+width:60px;
+height:60px;
+background:#d4af37;
+color:black;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+margin:0 auto 15px auto;
+font-weight:bold;
+}
 
 /* =========================
 CATALOGUE

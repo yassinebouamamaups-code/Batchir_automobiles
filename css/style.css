@@ -1,3 +1,6 @@
+*{
+box-sizing:border-box;
+}
 /* =========================
 BODY
 ========================= */
@@ -479,23 +482,35 @@ padding:80px 20px;
 
 .hero{
 padding:100px 20px;
-background-position:center 30%;
+background-position:center 5%;
 }
 
 .hero h1{
 font-size:28px;
 }
 
-.features{
+/* .features{
 flex-direction:column;
 align-items:center;
 gap:20px;
 padding:40px 15px;
+} */
+.features{
+flex-direction:column;
+align-items:center;
+gap:20px;
+padding:40px 10px;
+margin:0;
 }
+/* .feature{
+width:100%;
+max-width:320px;
+} */
 
 .feature{
 width:100%;
-max-width:320px;
+max-width:300px;
+margin:auto;
 }
 
 .vehicle{

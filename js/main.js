@@ -22,6 +22,7 @@ menuPanel.classList.toggle("open");
 
 loadCars();
 loadVehicle();
+loadGoogleRating();
 
 });
 
@@ -121,30 +122,26 @@ if(!car) return;
 
 /* infos */
 
-document.getElementById("carTitle").textContent =
-car.brand + " " + car.model;
+const title = document.getElementById("carTitle");
+const price = document.getElementById("carPrice");
+const year = document.getElementById("carYear");
+const km = document.getElementById("carKm");
+const gearbox = document.getElementById("carGearbox");
+const fuel = document.getElementById("carFuel");
 
-document.getElementById("carPrice").textContent =
-car.price + " €";
-
-document.getElementById("carYear").textContent =
-car.year;
-
-document.getElementById("carKm").textContent =
-car.km + " km";
-
-document.getElementById("carGearbox").textContent =
-car.gearbox;
-
-document.getElementById("carFuel").textContent =
-car.fuel;
+if(title) title.textContent = car.brand + " " + car.model;
+if(price) price.textContent = car.price + " €";
+if(year) year.textContent = car.year;
+if(km) km.textContent = car.km + " km";
+if(gearbox) gearbox.textContent = car.gearbox;
+if(fuel) fuel.textContent = car.fuel;
 
 
 /* photo principale */
 
 const mainPhoto = document.getElementById("mainPhoto");
 
-if(car.images.length){
+if(mainPhoto && car.images.length){
 mainPhoto.src = car.images[0];
 }
 
@@ -171,6 +168,44 @@ mainPhoto.src = img;
 });
 
 thumbnails.appendChild(thumb);
+
+});
+
+}
+
+
+/* =========================
+AFFICHER NOTE GOOGLE
+========================= */
+
+function loadGoogleRating(){
+
+const placeId = "0x12aeb78e37181613:0xfc794f09d17970bf";
+
+const service = new google.maps.places.PlacesService(document.createElement('div'));
+
+service.getDetails({
+
+placeId: placeId,
+fields: ["rating","user_ratings_total"]
+
+}, (place, status) => {
+
+if(status !== google.maps.places.PlacesServiceStatus.OK) return;
+
+const rating = place.rating;
+const total = place.user_ratings_total;
+
+const fullStars = Math.floor(rating);
+const emptyStars = 5 - fullStars;
+
+const stars = "★".repeat(fullStars) + "☆".repeat(emptyStars);
+
+document.getElementById("googleStars").innerHTML =
+`<div class="google-stars">${stars}</div>`;
+
+document.getElementById("googleScore").innerHTML =
+`${rating} / 5 sur Google (${total} avis)`;
 
 });
 

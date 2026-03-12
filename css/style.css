@@ -438,6 +438,7 @@ GOOGLE REVIEWS
 text-align:center;
 padding:80px 20px;
 background:#1a1a1a;
+margin-top:60px;
 }
 
 .google-reviews h2{
@@ -453,6 +454,49 @@ overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* note Google */
+
+.google-rating{
+margin-top:15px;
+margin-bottom:20px;
+font-size:22px;
+font-weight:bold;
+color:#f5b301;
+text-align:center;
+}
+
+/* étoiles */
+
+.google-stars{
+color:#f5b301;
+font-size:28px;
+letter-spacing:4px;
+}
+
+/* texte note */
+
+.google-score{
+font-size:18px;
+font-weight:600;
+margin-top:5px;
+}
+
+/* liens avis */
+
+.review-link{
+margin:10px 0;
+}
+
+.review-link a{
+color:#d4af37;
+font-weight:600;
+text-decoration:none;
+transition:0.2s;
+}
+
+.review-link a:hover{
+color:white;
+}
 /* =========================
 MOBILE
 ========================= */

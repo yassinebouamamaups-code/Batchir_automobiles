@@ -510,7 +510,19 @@ transition:0.2s;
 .review-link a:hover{
 color:white;
 }
+.seo-text{
+max-width:900px;
+margin:60px auto;
+padding:20px;
+font-size:16px;
+line-height:1.6;
+color:#333;
+}
 
+.seo-text h1{
+font-size:28px;
+margin-bottom:20px;
+}
 /* =========================
 MOBILE
 ========================= */

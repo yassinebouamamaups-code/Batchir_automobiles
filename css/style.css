@@ -168,7 +168,7 @@ HERO
 text-align:center;
 padding:40px 20px 40px 20px;
 background-image:url("../images/fond.jpeg");
-background-size:cover auto;
+background-size:cover;
 background-position:center 60%;
 background-repeat:no-repeat;
 

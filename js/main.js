@@ -180,7 +180,7 @@ AFFICHER NOTE GOOGLE
 
 function loadGoogleRating(){
 
-const placeId = "0x12aeb78e37181613:0xfc794f09d17970bf";
+const placeId = "ChIJExYYN463rhIRv3B50QlPefw";
 
 const service = new google.maps.places.PlacesService(document.createElement('div'));
 

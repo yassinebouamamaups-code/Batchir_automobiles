@@ -210,3 +210,5 @@ document.getElementById("googleScore").innerHTML =
 });
 
 }
+
+lucide.createIcons();

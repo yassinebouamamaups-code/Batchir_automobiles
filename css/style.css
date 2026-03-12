@@ -84,7 +84,15 @@ opacity:0;
 .hamburger.active span:nth-child(3){
 transform:rotate(-45deg) translate(5px,-5px);
 }
-
+#menuPanel i{
+width:20px;
+height:20px;
+stroke:#d4af37;
+margin-right:10px;
+}
+#menuPanel a:hover i{
+stroke:black;
+}
 /* =========================
 MENU PANEL
 ========================= */

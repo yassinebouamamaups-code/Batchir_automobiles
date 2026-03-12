@@ -166,10 +166,10 @@ HERO
 
 .hero{
 text-align:center;
-padding:60px 20px 40px 20px;
+padding:40px 20px 40px 20px;
 background-image:url("../images/fond.jpeg");
-background-size:cover;
-background-position:center 150%;
+background-size:cover auto;
+background-position:center 60%;
 background-repeat:no-repeat;
 
 position:relative;
@@ -633,6 +633,4 @@ body{
 overflow-x:hidden;
 }
 
-
 }
-

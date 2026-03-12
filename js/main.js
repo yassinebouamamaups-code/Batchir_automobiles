@@ -18,16 +18,46 @@ menuPanel.classList.toggle("open");
 
 }
 
+/* charger pages */
+
+loadCars();
+loadVehicle();
+
 });
 
 
 /* =========================
-GALERIE PHOTO
+RECUPERER VOITURES
 ========================= */
 
-function changePhoto(element){
+async function getCars(){
 
-document.getElementById("mainPhoto").src = element.src;
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM27bzqxD4YrKD4GYB_tmmVPMSk66jdp_PI5313ZR0Vb1bq-JjHw3G5-eEmxrvI/pub?gid=0&single=true&output=csv";
+
+const response = await fetch(url);
+const data = await response.text();
+
+const rows = data.split("\n").slice(1);
+
+return rows.map(row => {
+
+const cols = row.split(",");
+
+return {
+
+id: cols[0],
+brand: cols[1],
+model: cols[2],
+year: cols[3],
+km: cols[4],
+price: cols[5],
+fuel: cols[6],
+gearbox: cols[7],
+images: cols[8] ? cols[8].split("|") : []
+
+};
+
+});
 
 }
 
@@ -38,12 +68,11 @@ CHARGER CATALOGUE
 
 async function loadCars(){
 
-const response = await fetch("data/vehicles.json");
-const cars = await response.json();
-
 const container = document.getElementById("carsContainer");
 
 if(!container) return;
+
+const cars = await getCars();
 
 container.innerHTML = "";
 
@@ -53,7 +82,7 @@ container.innerHTML += `
 
 <div class="car">
 
-<img src="${car.images ? car.images[0] : 'vehicles/default.jpg'}" alt="${car.brand} ${car.model}">
+<img src="${car.images[0] || ''}" alt="${car.brand} ${car.model}">
 
 <h3>${car.brand} ${car.model}</h3>
 
@@ -71,46 +100,10 @@ container.innerHTML += `
 
 }
 
-loadCars();
-
-
 
 /* =========================
 CHARGER PAGE VEHICULE
 ========================= */
-
-// async function loadVehicle(){
-
-// const params = new URLSearchParams(window.location.search);
-// const carId = params.get("id");
-
-// if(!carId) return;
-
-// const response = await fetch("data/vehicles.json");
-// const cars = await response.json();
-
-// const car = cars.find(c => c.id === carId);
-
-// if(!car) return;
-
-// document.getElementById("carTitle").textContent = car.brand + " " + car.model;
-
-// document.getElementById("carPrice").textContent = car.price + " €";
-
-// document.getElementById("carYear").textContent = car.year;
-
-// document.getElementById("carKm").textContent = car.km + " km";
-
-// document.getElementById("carGearbox").textContent = car.gearbox;
-
-// document.getElementById("carFuel").textContent = car.fuel;
-
-// document.getElementById("mainPhoto").src =
-// car.images ? car.images[0] : "vehicles/default.jpg";
-
-// }
-
-// loadVehicle();
 
 async function loadVehicle(){
 
@@ -119,12 +112,12 @@ const carId = params.get("id");
 
 if(!carId) return;
 
-const response = await fetch("data/vehicles.json");
-const cars = await response.json();
+const cars = await getCars();
 
 const car = cars.find(c => c.id === carId);
 
 if(!car) return;
+
 
 /* infos */
 
@@ -146,14 +139,22 @@ car.gearbox;
 document.getElementById("carFuel").textContent =
 car.fuel;
 
+
 /* photo principale */
 
 const mainPhoto = document.getElementById("mainPhoto");
+
+if(car.images.length){
 mainPhoto.src = car.images[0];
+}
+
 
 /* miniatures */
 
 const thumbnails = document.getElementById("thumbnails");
+
+if(!thumbnails) return;
+
 thumbnails.innerHTML = "";
 
 car.images.forEach(img => {
@@ -174,5 +175,3 @@ thumbnails.appendChild(thumb);
 });
 
 }
-
-loadVehicle();

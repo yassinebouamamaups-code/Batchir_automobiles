@@ -416,7 +416,6 @@ color:#d4af37;
 text-decoration:none;
 }
 
-
 .contact-form form{
 display:flex;
 flex-direction:column;
@@ -454,34 +453,40 @@ overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* note Google */
-
 .google-rating{
+text-align:center;
 margin-top:15px;
-margin-bottom:20px;
+margin-bottom:25px;
 font-size:22px;
 font-weight:bold;
-color:#f5b301;
-text-align:center;
 }
 
 /* étoiles */
 
 .google-stars{
-color:#f5b301;
-font-size:28px;
-letter-spacing:4px;
+font-size:34px;
+letter-spacing:6px;
+background:linear-gradient(180deg,#ffd700,#f5b301);
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 6px rgba(255,215,0,0.5);
+animation:starsGlow 3s ease-in-out infinite;
 }
-
-/* texte note */
 
 .google-score{
-font-size:18px;
+font-size:20px;
+margin-top:8px;
 font-weight:600;
-margin-top:5px;
+color:white;
 }
 
-/* liens avis */
+@keyframes starsGlow{
+0%{text-shadow:0 0 6px rgba(255,215,0,0.4);}
+50%{text-shadow:0 0 16px rgba(255,215,0,0.8);}
+100%{text-shadow:0 0 6px rgba(255,215,0,0.4);}
+}
 
 .review-link{
 margin:10px 0;
@@ -497,6 +502,7 @@ transition:0.2s;
 .review-link a:hover{
 color:white;
 }
+
 /* =========================
 MOBILE
 ========================= */

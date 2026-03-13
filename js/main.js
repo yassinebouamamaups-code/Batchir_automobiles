@@ -38,13 +38,11 @@ const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM2
 const response = await fetch(url);
 const data = await response.text();
 
-const rows = data.split("\n").slice(1);
+const rows = data.trim().split("\n").slice(1);
 
 return rows.map(row => {
 
-// const cols = row.split(",");
-
-const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+const cols = row.split(",").map(c => c.replace(/"/g,"").trim());
 
 return {
 
@@ -57,9 +55,10 @@ price: cols[5],
 fuel: cols[6],
 gearbox: cols[7],
 images: cols[8] ? cols[8].split("|") : [],
-caracteristiques: cols[9]
+caracteristiques: cols[9] || ""
 
 };
+
 });
 
 }

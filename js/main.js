@@ -54,8 +54,9 @@ km: cols[4],
 price: cols[5],
 fuel: cols[6],
 gearbox: cols[7],
-images: cols[8] ? cols[8].split("|") : []
-
+// images: cols[8] ? cols[8].split("|") : []
+images: cols[8] ? cols[8].split("|") : [],
+caracteristiques: cols[9] || ""
 };
 
 });
@@ -119,7 +120,47 @@ const car = cars.find(c => c.id === carId);
 
 if(!car) return;
 
+// TEST Ajout
+/* =========================
+CARACTERISTIQUES
+========================= */
 
+const featuresButton = document.getElementById("toggleFeatures");
+const featuresContainer = document.getElementById("featuresContainer");
+const featuresList = document.getElementById("featuresList");
+
+if(car.caracteristiques){
+
+const features = car.caracteristiques.split("|");
+
+features.forEach(feature => {
+
+const li = document.createElement("li");
+li.textContent = feature.trim();
+
+featuresList.appendChild(li);
+
+});
+
+}
+
+if(featuresButton){
+
+featuresButton.addEventListener("click", () => {
+
+if(featuresContainer.style.display === "block"){
+
+featuresContainer.style.display = "none";
+
+}else{
+
+featuresContainer.style.display = "block";
+
+}
+
+});
+
+}
 /* infos */
 
 const title = document.getElementById("carTitle");

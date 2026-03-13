@@ -42,7 +42,9 @@ const rows = data.split("\n").slice(1);
 
 return rows.map(row => {
 
-const cols = row.split(",");
+// const cols = row.split(",");
+
+const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
 return {
 

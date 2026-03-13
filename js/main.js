@@ -31,7 +31,47 @@ loadGoogleRating();
 RECUPERER VOITURES
 ========================= */
 
+// async function getCars(){
+
+// const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM27bzqxD4YrKD4GYB_tmmVPMSk66jdp_PI5313ZR0Vb1bq-JjHw3G5-eEmxrvI/pub?gid=0&single=true&output=csv";
+
+// const response = await fetch(url);
+// const data = await response.text();
+
+// const rows = data.split("\n").slice(1);
+
+// return rows.map(row => {
+
+// const cols = row.split(",");
+
+// return {
+
+// id: cols[0],
+// brand: cols[1],
+// model: cols[2],
+// year: cols[3],
+// km: cols[4],
+// price: cols[5],
+// fuel: cols[6],
+// gearbox: cols[7],
+// // images: cols[8] ? cols[8].split("|") : []
+// images: cols[8] ? cols[8].split("|") : [],
+// caracteristiques: cols[9] || ""
+// };
+
+// });
+
+// }
 async function getCars(){
+
+const CACHE_TIME = 5 * 60 * 1000; // 5 minutes
+
+const cachedData = localStorage.getItem("carsData");
+const cachedTime = localStorage.getItem("carsTime");
+
+if(cachedData && cachedTime && Date.now() - cachedTime < CACHE_TIME){
+return JSON.parse(cachedData);
+}
 
 const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM27bzqxD4YrKD4GYB_tmmVPMSk66jdp_PI5313ZR0Vb1bq-JjHw3G5-eEmxrvI/pub?gid=0&single=true&output=csv";
 
@@ -40,7 +80,7 @@ const data = await response.text();
 
 const rows = data.split("\n").slice(1);
 
-return rows.map(row => {
+const cars = rows.map(row => {
 
 const cols = row.split(",");
 
@@ -54,12 +94,17 @@ km: cols[4],
 price: cols[5],
 fuel: cols[6],
 gearbox: cols[7],
-// images: cols[8] ? cols[8].split("|") : []
 images: cols[8] ? cols[8].split("|") : [],
 caracteristiques: cols[9] || ""
+
 };
 
 });
+
+localStorage.setItem("carsData", JSON.stringify(cars));
+localStorage.setItem("carsTime", Date.now());
+
+return cars;
 
 }
 
@@ -219,7 +264,15 @@ thumbnails.appendChild(thumb);
 AFFICHER NOTE GOOGLE
 ========================= */
 
+// function loadGoogleRating(){
+
+// const placeId = "ChIJExYYN463rhIRv3B50QlPefw";
+
+// const service = new google.maps.places.PlacesService(document.createElement('div'));
+
 function loadGoogleRating(){
+
+if(typeof google === "undefined") return;
 
 const placeId = "ChIJExYYN463rhIRv3B50QlPefw";
 

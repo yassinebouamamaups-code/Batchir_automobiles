@@ -101,7 +101,6 @@ container.innerHTML += `
 
 }
 
-
 /* =========================
 CHARGER PAGE VEHICULE
 ========================= */
@@ -118,12 +117,18 @@ const cars = await getCars();
 const car = cars.find(c => c.id === carId);
 
 if(!car) return;
+
 /* =========================
-CHARGER caractéristiques
+CARACTERISTIQUES VEHICULE
 ========================= */
+
 const featuresButton = document.getElementById("toggleFeatures");
 const featuresContainer = document.getElementById("featuresContainer");
 const featuresList = document.getElementById("featuresList");
+
+/* bouton ouvrir / fermer */
+
+if(featuresButton && featuresContainer){
 
 featuresButton.addEventListener("click", () => {
 
@@ -140,6 +145,25 @@ featuresButton.textContent = "Masquer les caractéristiques";
 }
 
 });
+
+}
+
+/* afficher les caractéristiques */
+
+if(car.caracteristiques && featuresList){
+
+const features = car.caracteristiques ? car.caracteristiques.split("|") : [];
+
+features.forEach(feature => {
+
+const li = document.createElement("li");
+li.textContent = feature.trim();
+
+featuresList.appendChild(li);
+
+});
+
+}
 /* infos */
 
 const title = document.getElementById("carTitle");

@@ -38,11 +38,11 @@ const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM2
 const response = await fetch(url);
 const data = await response.text();
 
-const rows = data.trim().split("\n").slice(1);
+const rows = data.split("\n").slice(1);
 
 return rows.map(row => {
 
-const cols = row.split(",").map(c => c.replace(/"/g,"").trim());
+const cols = row.split(",");
 
 return {
 
@@ -54,8 +54,7 @@ km: cols[4],
 price: cols[5],
 fuel: cols[6],
 gearbox: cols[7],
-images: cols[8] ? cols[8].split("|") : [],
-caracteristiques: cols[9] || ""
+images: cols[8] ? cols[8].split("|") : []
 
 };
 
@@ -102,6 +101,7 @@ container.innerHTML += `
 
 }
 
+
 /* =========================
 CHARGER PAGE VEHICULE
 ========================= */
@@ -119,52 +119,7 @@ const car = cars.find(c => c.id === carId);
 
 if(!car) return;
 
-/* =========================
-CARACTERISTIQUES VEHICULE
-========================= */
 
-const featuresButton = document.getElementById("toggleFeatures");
-const featuresContainer = document.getElementById("featuresContainer");
-const featuresList = document.getElementById("featuresList");
-
-/* bouton ouvrir / fermer */
-
-if(featuresButton && featuresContainer){
-
-featuresButton.addEventListener("click", () => {
-
-if(featuresContainer.style.display === "block"){
-
-featuresContainer.style.display = "none";
-featuresButton.textContent = "Voir toutes les caractéristiques";
-
-}else{
-
-featuresContainer.style.display = "block";
-featuresButton.textContent = "Masquer les caractéristiques";
-
-}
-
-});
-
-}
-
-/* afficher les caractéristiques */
-
-if(car.caracteristiques && featuresList){
-
-const features = car.caracteristiques ? car.caracteristiques.split("|") : [];
-
-features.forEach(feature => {
-
-const li = document.createElement("li");
-li.textContent = feature.trim();
-
-featuresList.appendChild(li);
-
-});
-
-}
 /* infos */
 
 const title = document.getElementById("carTitle");

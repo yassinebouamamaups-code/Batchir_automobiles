@@ -54,10 +54,10 @@ km: cols[4],
 price: cols[5],
 fuel: cols[6],
 gearbox: cols[7],
-images: cols[8] ? cols[8].split("|") : []
+images: cols[8] ? cols[8].split("|") : [],
+caracteristiques: cols[9]
 
 };
-
 });
 
 }
@@ -118,8 +118,28 @@ const cars = await getCars();
 const car = cars.find(c => c.id === carId);
 
 if(!car) return;
+/* =========================
+CHARGER caractéristiques
+========================= */
+const featuresButton = document.getElementById("toggleFeatures");
+const featuresContainer = document.getElementById("featuresContainer");
+const featuresList = document.getElementById("featuresList");
 
+featuresButton.addEventListener("click", () => {
 
+if(featuresContainer.style.display === "block"){
+
+featuresContainer.style.display = "none";
+featuresButton.textContent = "Voir toutes les caractéristiques";
+
+}else{
+
+featuresContainer.style.display = "block";
+featuresButton.textContent = "Masquer les caractéristiques";
+
+}
+
+});
 /* infos */
 
 const title = document.getElementById("carTitle");

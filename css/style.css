@@ -349,6 +349,10 @@ background:#1c1c1c;
 padding:25px;
 border-radius:10px;
 text-align:center;
+
+/* Ajout test */
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+
 }
 
 .car img{
@@ -358,14 +362,24 @@ height:auto;
 display:block;
 margin:0 auto 10px auto;
 border-radius:6px;
-}
 
+/* Ajout test */
+aspect-ratio:4/3;
+object-fit:cover;
+transition:transform 0.4s ease;
+}
+.car:hover img{
+transform:scale(1.05);
+}
 .price{
 color:#d4af37;
 font-size:22px;
 font-weight:bold;
 }
-
+.car:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
 /* =========================
 PAGE VEHICULE
 ========================= */

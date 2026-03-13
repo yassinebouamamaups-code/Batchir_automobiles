@@ -84,18 +84,15 @@ opacity:0;
 .hamburger.active span:nth-child(3){
 transform:rotate(-45deg) translate(5px,-5px);
 }
-
 #menuPanel i{
 width:20px;
 height:20px;
 stroke:#d4af37;
 margin-right:10px;
 }
-
 #menuPanel a:hover i{
 stroke:black;
 }
-
 /* =========================
 MENU PANEL
 ========================= */
@@ -142,10 +139,50 @@ color:black;
 font-size:18px;
 }
 
-/* =========================
-CARACTERISTIQUES VEHICULE
-========================= */
+/* Caractéristiques du véhicule  */
 
+.btn-features{
+background:#000;
+color:#fff;
+padding:12px 20px;
+border:none;
+cursor:pointer;
+font-size:16px;
+margin-top:20px;
+transition:0.3s;
+}
+
+.btn-features:hover{
+background:#333;
+}
+
+.features-container{
+display:none;
+background:#ffffff;
+color:#111;
+margin-top:25px;
+padding:25px;
+border-radius:8px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.features-container h2{
+margin-bottom:15px;
+}
+
+.features-container ul{
+list-style:none;
+padding:0;
+}
+
+.features-container li{
+padding:8px 0;
+border-bottom:1px solid #ddd;
+}
+
+/* * Test  */
 .vehicle-features{
 text-align:center;
 margin-top:30px;
@@ -167,49 +204,20 @@ transition:0.3s;
 background:#e6c24a;
 }
 
-/* conteneur caractéristiques */
-
 .features-container{
 display:none;
-background:#fff;
-color:#111;
 margin-top:25px;
-padding:25px;
-border-radius:8px;
 max-width:700px;
 margin-left:auto;
 margin-right:auto;
 text-align:left;
-
-animation:featuresFade 0.35s ease;
+background:#e6c24a ;
 }
-
-/* animation ouverture */
-
-@keyframes featuresFade{
-from{
-opacity:0;
-transform:translateY(-10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* liste */
 
 #featuresList{
 list-style:none;
 padding:0;
 margin:0;
-}
-
-#featuresList li{
-padding:12px 0;
-border-bottom:1px solid #ddd;
-font-size:16px;
-color:#111;
 }
 
 #featuresList li::before{
@@ -218,7 +226,12 @@ color:#d4af37;
 margin-right:10px;
 font-weight:bold;
 }
-
+#featuresList li{
+padding:12px 0;
+border-bottom:1px solid #ddd;
+font-size:16px;
+color:#111;
+}
 /* =========================
 HERO
 ========================= */
@@ -230,8 +243,10 @@ background-image:url("../images/fond.jpeg");
 background-size:cover;
 background-position:center 60%;
 background-repeat:no-repeat;
+
 position:relative;
 height:350px;
+
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -257,6 +272,26 @@ background:rgba(0,0,0,0.5);
 position:relative;
 z-index:1;
 }
+/* 
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero *{
+position:relative;
+z-index:1;
+} */
 
 /* =========================
 BOUTONS
@@ -407,4 +442,267 @@ border-color:#d4af37;
 .vehicle-info{
 flex:1;
 max-width:420px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+margin-top:60px;
+}
+
+/* =========================
+BOUTONS FLOTTANTS
+========================= */
+
+.floating-buttons{
+position:fixed;
+bottom:25px;
+right:25px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:1200;
+}
+
+.call-button{
+background:#630404;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.call-button:hover{
+transform:scale(1.1);
+}
+
+.whatsapp-button{
+background:#25D366;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.whatsapp-button:hover{
+transform:scale(1.1);
+}
+
+/* =========================
+CONTACT PAGE
+========================= */
+
+.contact-page{
+padding:80px 20px;
+text-align:center;
+}
+
+.contact-container{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+gap:100px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.contact-info{
+background:#1c1c1c;
+padding:35px;
+border-radius:10px;
+width:320px;
+text-align:left;
+}
+
+.contact-form{
+background:#1c1c1c;
+padding:35px;
+border-radius:10px;
+width:380px;
+}
+
+.contact-info a{
+color:#d4af37;
+text-decoration:none;
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+/* =========================
+GOOGLE REVIEWS
+========================= */
+
+.google-reviews{
+text-align:center;
+padding:80px 20px;
+background:#1a1a1a;
+margin-top:60px;
+}
+
+.google-reviews h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.map-container{
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.google-rating{
+text-align:center;
+margin-top:15px;
+margin-bottom:25px;
+font-size:22px;
+font-weight:bold;
+}
+
+/* étoiles */
+
+.google-stars{
+font-size:34px;
+letter-spacing:6px;
+background:linear-gradient(180deg,#ffd700,#f5b301);
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 6px rgba(255,215,0,0.5);
+animation:starsGlow 3s ease-in-out infinite;
+}
+
+.google-score{
+font-size:20px;
+margin-top:8px;
+font-weight:600;
+color:white;
+}
+
+@keyframes starsGlow{
+0%{text-shadow:0 0 6px rgba(255,215,0,0.4);}
+50%{text-shadow:0 0 16px rgba(255,215,0,0.8);}
+100%{text-shadow:0 0 6px rgba(255,215,0,0.4);}
+}
+
+.review-link{
+margin:10px 0;
+}
+
+.review-link a{
+color:#d4af37;
+font-weight:600;
+text-decoration:none;
+transition:0.2s;
+}
+
+.review-link a:hover{
+color:white;
+}
+.seo-text{
+max-width:900px;
+margin:60px auto;
+padding:20px;
+font-size:16px;
+line-height:1.6;
+color:#333;
+}
+
+.seo-text h1{
+font-size:28px;
+margin-bottom:20px;
+}
+/*=========================
+MOBILE
+========================= */
+
+@media (max-width:768px){
+
+header{
+padding:15px 20px;
+height:120px;
+}
+
+.logo img{
+height:90px;
+}
+
+.hero{
+padding:70px 20px 30px 20px;
+height:420px;
+background-size:cover;
+background-position:center 35%;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+
+/* .hero{
+padding:70px 20px 30px 20px;
+min-height:420px;
+background-position:center 20%;
+
+background-size:cover;
+}
+
+.hero h1{
+font-size:28px;
+} */
+
+.features{
+flex-direction:column;
+align-items:center;
+gap:20px;
+padding:40px 10px;
+}
+
+.feature{
+width:100%;
+max-width:300px;
+margin:auto;
+border:1px solid #d4af37;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+.vehicle{
+flex-direction:column;
+padding:40px 20px;
+}
+
+.vehicle-gallery #mainPhoto{
+height:250px;
+}
+
+body{
+overflow-x:hidden;
+}
+
 }

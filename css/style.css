@@ -139,27 +139,75 @@ color:black;
 font-size:18px;
 }
 
-/* =========================
-HERO
-========================= */
+/* Caractéristiques du véhicule  */
 
-/* .hero{
+.btn-features{
+background:#000;
+color:#fff;
+padding:12px 20px;
+border:none;
+cursor:pointer;
+font-size:16px;
+margin-top:20px;
+transition:0.3s;
+}
+
+.btn-features:hover{
+background:#333;
+}
+
+.features-container{
+display:none;
+margin-top:20px;
+background:#f5f5f5;
+padding:20px;
+border-radius:6px;
+}
+
+.features-container h2{
+margin-bottom:15px;
+}
+
+.features-container ul{
+list-style:none;
+padding:0;
+}
+
+.features-container li{
+padding:8px 0;
+border-bottom:1px solid #ddd;
+}
+
+/* * Test  */
+.vehicle-features{
 text-align:center;
-padding:60px 20px 40px 20px;
-background-image:url("../images/fond.jpeg");
+margin-top:30px;
+}
 
-background-size:100% auto;
-background-position:center top 60%;
-background-repeat:no-repeat;
+.btn-features{
+background:#d4af37;
+color:#000;
+border:none;
+padding:14px 28px;
+font-size:16px;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
 
-position:relative;
-height:300px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:flex-start;
-} */
- 
+.btn-features:hover{
+background:#e6c24a;
+}
+
+.features-container{
+display:none;
+margin-top:25px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+}
 /* =========================
 HERO
 ========================= */

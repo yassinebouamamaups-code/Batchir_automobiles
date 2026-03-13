@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+
+await getCars(); // précharge les voitures
+
 
 /* =========================
 MENU
@@ -78,13 +81,37 @@ const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS02WcggUWPMCNCPQM2
 const response = await fetch(url);
 const data = await response.text();
 
-const rows = data.split("\n").slice(1);
+// const rows = data.split("\n").slice(1);
 
-const cars = rows.map(row => {
+// const cars = rows.map(row => {
 
-const cols = row.split(",");
+// const cols = row.split(",");
 
-return {
+// return {
+
+// id: cols[0],
+// brand: cols[1],
+// model: cols[2],
+// year: cols[3],
+// km: cols[4],
+// price: cols[5],
+// fuel: cols[6],
+// gearbox: cols[7],
+// images: cols[8] ? cols[8].split("|") : [],
+// caracteristiques: cols[9] || ""
+
+// };
+
+// });
+const rows = data.trim().split("\n");
+
+const cars = [];
+
+for(let i = 1; i < rows.length; i++){
+
+const cols = rows[i].split(",");
+
+cars.push({
 
 id: cols[0],
 brand: cols[1],
@@ -97,9 +124,9 @@ gearbox: cols[7],
 images: cols[8] ? cols[8].split("|") : [],
 caracteristiques: cols[9] || ""
 
-};
-
 });
+
+}
 
 localStorage.setItem("carsData", JSON.stringify(cars));
 localStorage.setItem("carsTime", Date.now());
@@ -113,23 +140,55 @@ return cars;
 CHARGER CATALOGUE
 ========================= */
 
+// async function loadCars(){
+
+// const container = document.getElementById("carsContainer");
+
+// if(!container) return;
+
+// const cars = await getCars();
+
+// container.innerHTML = "";
+
+// cars.forEach(car => {
+
+// container.innerHTML += `
+
+// <div class="car">
+
+// <img src="${car.images[0] || ''}" alt="${car.brand} ${car.model}">
+
+// <h3>${car.brand} ${car.model}</h3>
+
+// <p>${car.year} • ${car.km} km</p>
+
+// <span class="price">${car.price} €</span>
+
+// <a href="vehicle.html?id=${car.id}" class="btn">Voir le véhicule</a>
+
+// </div>
+
+// `;
+
+// });
+
+// }
 async function loadCars(){
 
 const container = document.getElementById("carsContainer");
-
 if(!container) return;
 
 const cars = await getCars();
 
-container.innerHTML = "";
+let html = "";
 
 cars.forEach(car => {
 
-container.innerHTML += `
+html += `
 
 <div class="car">
 
-<img src="${car.images[0] || ''}" alt="${car.brand} ${car.model}">
+<img src="${car.images[0] || ''}" alt="${car.brand} ${car.model}" loading="lazy">
 
 <h3>${car.brand} ${car.model}</h3>
 
@@ -144,6 +203,8 @@ container.innerHTML += `
 `;
 
 });
+
+container.innerHTML = html;
 
 }
 

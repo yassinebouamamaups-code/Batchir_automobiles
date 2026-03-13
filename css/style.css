@@ -141,48 +141,10 @@ font-size:18px;
 
 /* Caractéristiques du véhicule  */
 
-.btn-features{
-background:#000;
-color:#fff;
-padding:12px 20px;
-border:none;
-cursor:pointer;
-font-size:16px;
-margin-top:20px;
-transition:0.3s;
-}
+/* =========================
+CARACTERISTIQUES VEHICULE
+========================= */
 
-.btn-features:hover{
-background:#333;
-}
-
-.features-container{
-display:none;
-background:#ffffff;
-color:#111;
-margin-top:25px;
-padding:25px;
-border-radius:8px;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
-}
-
-.features-container h2{
-margin-bottom:15px;
-}
-
-.features-container ul{
-list-style:none;
-padding:0;
-}
-
-.features-container li{
-padding:8px 0;
-border-bottom:1px solid #ddd;
-}
-
-/* * Test  */
 .vehicle-features{
 text-align:center;
 margin-top:30px;
@@ -206,12 +168,28 @@ background:#e6c24a;
 
 .features-container{
 display:none;
+background:#fff;
+color:#111;
 margin-top:25px;
+padding:25px;
+border-radius:8px;
 max-width:700px;
 margin-left:auto;
 margin-right:auto;
 text-align:left;
-background:#e6c24a ;
+
+animation:featuresFade 0.35s ease;
+}
+
+@keyframes featuresFade{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 #featuresList{
@@ -220,17 +198,18 @@ padding:0;
 margin:0;
 }
 
-#featuresList li::before{
-content:"✓";
-color:#d4af37;
-margin-right:10px;
-font-weight:bold;
-}
 #featuresList li{
 padding:12px 0;
 border-bottom:1px solid #ddd;
 font-size:16px;
 color:#111;
+}
+
+#featuresList li::before{
+content:"✓";
+color:#d4af37;
+margin-right:10px;
+font-weight:bold;
 }
 /* =========================
 HERO

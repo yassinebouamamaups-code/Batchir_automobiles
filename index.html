@@ -2,17 +2,21 @@
 <html lang="fr">
 
 <head>
-<meta name="description" content="Reprise de véhicule rapide avec Batchir Automobiles. Estimez la valeur de revente de votre voiture en quelques minutes grâce à notre service de reprise automobile.">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Batchir Automobiles - Reprise véhicules - Voitures d'occasion à Villeneuve / Toulouse</title>
+<title>Reprise automobile - Batchir Automobiles</title>
+
+<meta name="description" content="Estimez la reprise de votre véhicule en quelques minutes avec Batchir Automobiles près de Toulouse. Réponse rapide et estimation gratuite.">
 
 <link rel="stylesheet" href="css/style.css">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdRVEe53qSQahwUrx0NF_b-BMXAG67n-8&libraries=places"></script>
-<script defer src="js/main.js"></script>
+
 <script src="https://unpkg.com/lucide@latest"></script>
+<script defer src="js/main.js"></script>
+
 </head>
+
 
 <body>
 
@@ -36,21 +40,17 @@
 
 <nav id="menuPanel">
 
-
-<a href="index.html" class="active">
+<a href="index.html">
 <i data-lucide="home"></i> Accueil
 </a>
-<a href="reprise.html">
+
+<a href="reprise.html" class="active">
 <i data-lucide="coins"></i> Reprise automobile
 </a>
 
 <a href="catalog.html">
 <i data-lucide="car"></i> Véhicules disponibles
 </a>
-
-<!-- <a href="#">
-<i data-lucide="wrench"></i> Devis
-</a> -->
 
 <a href="contact.html">
 <i data-lucide="phone"></i> Contact
@@ -65,196 +65,140 @@
 
 <main>
 
- <section class="hero">
 
-<h1>Vente et reprise de véhicules d'occasion près de Toulouse</h1>
+<section class="hero">
 
-<a class="btn" href="catalog.html">Voir le catalogue</a>
-<a href="reprise.html" class="btn">
-Estimer la reprise de mon véhicule
-</a>
+<h1>Estimez la reprise de votre véhicule</h1>
+
+<p class="hero-subtitle">
+Obtenez une estimation gratuite en quelques minutes
+</p>
+
 </section>
 
 
-<section class="features"> 
+<section class="reprise-section">
 
+<h2>Estimation gratuite de votre véhicule</h2>
 
-<div class="feature">
+<p class="reprise-intro">
+Remplissez le formulaire ci-dessous afin d'obtenir une estimation de reprise pour votre voiture.
+Notre équipe vous recontactera rapidement avec une première évaluation.
+</p>
 
-<div class="feature-icon">✔</div>
+<p class="form-info">
+⏱ Estimation gratuite en moins de 2 minutes
+</p>
+<form class="contact-form" 
+action="https://formsubmit.co/contact@batchirautomobiles.com" 
+method="POST">
 
-<h3>Véhicules contrôlés</h3>
+<input type="hidden" name="_subject" value="Demande de reprise véhicule">
 
-<p>Tous nos véhicules sont inspectés avant leur mise en vente.</p>
+<div class="form-group">
 
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">📄</div>
-
-<h3>Transparence</h3>
-
-<p>Historique clair et informations complètes pour chaque véhicule.</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">🤝</div>
-
-<h3>Service professionnel</h3>
-
-<p>Un accompagnement sérieux dans votre recherche automobile.</p>
+<label>Immatriculation</label>
+<input type="text" name="Immatriculation" required>
 
 </div>
 
+<div class="form-group">
 
-<div class="feature">
-
-<div class="feature-icon">🛡</div>
-
-<h3>Véhicules garantis</h3>
-
-<p>Nos véhicules bénéficient d'une garantie pour votre tranquillité.</p>
+<label>Marque</label>
+<input type="text" name="Marque" required>
 
 </div>
+
+<div class="form-group">
+
+<label>Modèle</label>
+<input type="text" name="Modele" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Kilométrage</label>
+<input type="number" name="Kilometrage" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Frais à prévoir</label>
+<textarea name="Frais"></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+<input type="email" name="Email" required>
+
+</div>
+
+<div class="form-group">
+
+<label>Téléphone</label>
+<input type="tel" name="Telephone">
+
+</div>
+
+<button type="submit" class="btn">
+Envoyer la demande de reprise
+</button>
+
+</form>
+
+</section>
+
+
+
+<section class="seo-reprise">
+
+<h2>Reprise de véhicule près de Toulouse</h2>
+
+<p>
+Batchir Automobiles vous propose un service de reprise de véhicule rapide et simple.
+Si vous souhaitez vendre ou faire reprendre votre voiture, nous vous proposons
+une estimation rapide basée sur les caractéristiques de votre véhicule.
+</p>
+
+<p>
+Notre service de reprise automobile s'adresse aux particuliers souhaitant revendre
+leur véhicule d'occasion sans les contraintes des annonces et des négociations.
+</p>
+
+<h2>Pourquoi faire reprendre votre voiture</h2>
+
+<ul>
+<li>Estimation rapide</li>
+<li>Reprise simplifiée</li>
+<li>Gain de temps</li>
+<li>Accompagnement professionnel</li>
+</ul>
+
+<p>
+Notre service de reprise de voiture est disponible pour les clients situés à
+Toulouse, Muret, Villeneuve-Tolosane, Cugnaux et dans toute la région Occitanie.
+</p>
 
 </section>
 
 </main>
 
 
-
-<div class="floating-buttons">
-
-<a href="tel:+33635277652" class="call-button" aria-label="Appeler">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24">
-<path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.7 22 2 13.3 2 2c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
-</svg>
-</a>
-
-
-<a href="https://wa.me/33635277652" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
-<svg width="28px" height="28px" viewBox="-2.73 0 1225.016 1225.016" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#E0E0E0" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"></path><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="609.77" y1="1190.114" x2="609.77" y2="21.084"><stop offset="0" stop-color="#20b038"></stop><stop offset="1" stop-color="#60d66a"></stop></linearGradient><path fill="url(#a)" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"></path><image overflow="visible" opacity=".08" width="682" height="639" xlink:href="images/whatsapp.jpg" transform="translate(270.984 291.372)"></image><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"></path><path fill="#FFF" d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.255.003c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z">
-
-</path>
-</g>
-</svg>
-
-</a>
-
-</div>
-<section class="google-reviews">
-
-<h2>Avis clients</h2>
-
-<!-- ⭐ étoiles Google -->
-<div class="google-rating">
-
-<div id="googleStars"></div>
-
-<div id="googleScore"></div>
-
-</div>
-
-<p class="review-link">
-
-<a href="https://search.google.com/local/writereview?placeid=ChIJExYYN463rhIRv3B50QlPefw" target="_blank">
-⭐ Laisser un avis
-</a>
-
-</p>
-
-<div class="map-container">
-
-<iframe
-src="https://www.google.com/maps?q=Batchir%20Automobiles&output=embed"
-width="100%"
-height="450"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</div>
-</section>
-
-<section class="seo-text">
-  <h2>Véhicules d'occasion près de Toulouse</h2>
-
-  <p>
-  Batchir Automobiles est spécialisé dans la vente de véhicules d'occasion à
-  proximité de Toulouse et Muret. Nous proposons une sélection de voitures d'occasion
-  contrôlées : citadines, berlines, SUV et utilitaires.
-  </p>
-
-  <p>
-  Notre objectif est de proposer des voitures d'occasion fiables et accessibles pour
-  les clients de Toulouse, Villeneuve-Tolosane, Cugnaux, Portet-sur-Garonne et les
-  communes environnantes.
-  </p>
-</section>
-
-<section class="seo-reprise">
-
-<h2>Reprise de votre véhicule en quelques minutes</h2>
-
-<p>
-Vous souhaitez effectuer une reprise de véhicule rapidement et sans démarches compliquées ? 
-Batchir Automobiles vous propose une solution simple pour la revente de votre véhicule. 
-Grâce à notre service d’estimation en ligne, vous pouvez obtenir une première estimation de la valeur de reprise de votre voiture en seulement quelques minutes.
-</p>
-
-<p>
-Que vous souhaitiez revendre votre voiture pour acheter un nouveau véhicule ou simplement vendre votre véhicule d’occasion, notre équipe vous accompagne dans toutes les étapes de la reprise automobile.
-</p>
-
-<h2>Revendre son véhicule simplement</h2>
-
-<p>
-La revente d’un véhicule peut parfois être longue et complexe entre les annonces, les appels et les visites. 
-Avec Batchir Automobiles, la reprise de votre voiture devient rapide et sécurisée.
-</p>
-
-<p>
-Nous étudions chaque demande de reprise de véhicule afin de proposer une estimation cohérente en fonction de :
-</p>
-
-<ul>
-<li>la marque et le modèle</li>
-<li>le kilométrage</li>
-<li>l’état général du véhicule</li>
-<li>les éventuels frais à prévoir</li>
-</ul>
-
-<h2>Pourquoi choisir Batchir Automobiles pour la reprise de votre voiture</h2>
-
-<p>
-Faire appel à Batchir Automobiles pour la reprise de votre véhicule vous permet de bénéficier d’un accompagnement professionnel et d’une estimation rapide. 
-Notre objectif est de faciliter la revente de votre véhicule tout en vous proposant une solution fiable et transparente.
-</p>
-
-<p>
-Remplissez simplement notre formulaire d’estimation et nous vous recontactons rapidement afin d’évaluer la reprise de votre véhicule.
-</p>
-<p>
-Notre service de reprise de voiture est disponible pour les clients souhaitant revendre leur véhicule à Toulouse et dans toute la région Occitanie.
-</p>
-</section>
-
-<script>
-lucide.createIcons();
-</script>
-
 <footer>
 
 <p>© 2023 Batchir Automobiles</p>
 
 </footer>
-</body>
 
+
+<script>
+lucide.createIcons();
+</script>
+
+
+</body>
 </html>

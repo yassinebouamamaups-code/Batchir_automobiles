@@ -100,7 +100,22 @@ opacity:0.9;
 margin-top:10px;
 
 }
+/* =========================
+BOUTONS HERO
+========================= */
 
+.hero-buttons{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:10px;
+align-items:center;
+}
+
+.hero-buttons .btn{
+min-width:240px;
+text-align:center;
+}
 
 /* =========================
 FORMULAIRE REPRISE
@@ -172,6 +187,9 @@ resize:vertical;
 
 margin-top:10px;
 
+}
+.contact-form h2{
+color:white;
 }
 /* .reprise-section{
 

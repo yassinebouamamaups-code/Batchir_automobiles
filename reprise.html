@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,28 +8,82 @@
 
 <title>Reprise automobile - Batchir Automobiles</title>
 
+<meta name="description" content="Estimez la reprise de votre véhicule en quelques minutes avec Batchir Automobiles près de Toulouse. Réponse rapide et estimation gratuite.">
+
 <link rel="stylesheet" href="css/style.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script defer src="js/main.js"></script>
 
 </head>
 
+
 <body>
 
-<header class="hero-small">
+<header>
 
-<h1>Estimez la reprise de votre véhicule</h1>
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.jpg" alt="Batchir Automobiles">
+</a>
+</div>
 
-<p>Réponse rapide en quelques minutes</p>
+<div class="menu-tools">
+
+<button id="menuButton" class="hamburger" aria-label="Ouvrir le menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+<nav id="menuPanel">
+
+<a href="index.html">
+<i data-lucide="home"></i> Accueil
+</a>
+
+<a href="reprise.html" class="active">
+<i data-lucide="coins"></i> Reprise automobile
+</a>
+
+<a href="catalog.html">
+<i data-lucide="car"></i> Véhicules disponibles
+</a>
+
+<a href="contact.html">
+<i data-lucide="phone"></i> Contact
+</a>
+
+</nav>
+
+</div>
 
 </header>
 
 
+<main>
+
+
+<section class="hero">
+
+<h1>Estimez la reprise de votre véhicule</h1>
+
+<p class="hero-subtitle">
+Obtenez une estimation gratuite en quelques minutes
+</p>
+
+</section>
+
+
 <section class="reprise-section">
 
-<h2>Estimation gratuite</h2>
+<h2>Estimation gratuite de votre véhicule</h2>
 
-<p>
-Remplissez le formulaire ci-dessous.  
-Nous estimons la valeur de reprise de votre véhicule et vous recontactons sous 24h.
+<p class="reprise-intro">
+Remplissez le formulaire ci-dessous afin d'obtenir une estimation de reprise pour votre voiture.
+Notre équipe vous recontactera rapidement avec une première évaluation.
 </p>
 
 
@@ -36,25 +91,89 @@ Nous estimons la valeur de reprise de votre véhicule et vous recontactons sous 
 
 <input type="hidden" name="_subject" value="Nouvelle demande de reprise">
 
+<div class="form-group">
 <input type="text" name="Immatriculation" placeholder="Immatriculation" required>
+</div>
 
+<div class="form-group">
 <input type="text" name="Marque" placeholder="Marque" required>
+</div>
 
+<div class="form-group">
 <input type="text" name="Modele" placeholder="Modèle" required>
+</div>
 
+<div class="form-group">
 <input type="number" name="Kilometrage" placeholder="Kilométrage" required>
+</div>
 
+<div class="form-group">
 <textarea name="Frais" placeholder="Frais à prévoir (rayures, pneus, entretien...)"></textarea>
+</div>
 
+<div class="form-group">
 <input type="email" name="Email" placeholder="Votre email" required>
+</div>
 
+<div class="form-group">
 <input type="tel" name="Telephone" placeholder="Votre téléphone">
+</div>
 
-<button type="submit">Estimer mon véhicule</button>
+<button type="submit" class="btn">
+Estimer mon véhicule
+</button>
 
 </form>
 
 </section>
+
+
+
+<section class="seo-reprise">
+
+<h2>Reprise de véhicule près de Toulouse</h2>
+
+<p>
+Batchir Automobiles vous propose un service de reprise de véhicule rapide et simple.
+Si vous souhaitez vendre ou faire reprendre votre voiture, nous vous proposons
+une estimation rapide basée sur les caractéristiques de votre véhicule.
+</p>
+
+<p>
+Notre service de reprise automobile s'adresse aux particuliers souhaitant revendre
+leur véhicule d'occasion sans les contraintes des annonces et des négociations.
+</p>
+
+<h2>Pourquoi faire reprendre votre voiture</h2>
+
+<ul>
+<li>Estimation rapide</li>
+<li>Reprise simplifiée</li>
+<li>Gain de temps</li>
+<li>Accompagnement professionnel</li>
+</ul>
+
+<p>
+Notre service de reprise de voiture est disponible pour les clients situés à
+Toulouse, Muret, Villeneuve-Tolosane, Cugnaux et dans toute la région Occitanie.
+</p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>© 2023 Batchir Automobiles</p>
+
+</footer>
+
+
+<script>
+lucide.createIcons();
+</script>
+
 
 </body>
 </html>

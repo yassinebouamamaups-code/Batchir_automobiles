@@ -111,7 +111,9 @@ align-items:center;
 margin-top:30px;
 gap:18px;
 }
-
+.hero-buttons a + a{
+margin-top:12px;
+}
 .hero-buttons .btn{
 display:block;
 width:260px;

@@ -104,7 +104,7 @@ margin-top:10px;
 BOUTONS HERO
 ========================= */
 
-.hero-buttons{
+/* .hero-buttons{
 display:flex;
 flex-direction:column;
 gap:14px;
@@ -115,8 +115,20 @@ align-items:center;
 .hero-buttons .btn{
 min-width:240px;
 text-align:center;
+} */
+.hero-buttons{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:20px;
+gap:16px;
 }
 
+.hero-buttons .btn{
+min-width:260px;
+text-align:center;
+margin:6px 0;
+}
 /* =========================
 FORMULAIRE REPRISE
 ========================= */
@@ -774,6 +786,22 @@ color:#333;
 .seo-text h1{
 font-size:28px;
 margin-bottom:20px;
+}
+
+/* =========================
+SEO HIDDEN TITLES
+========================= */
+
+.seo-text h2,
+.seo-reprise h2{
+
+position:absolute;
+left:-9999px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+
 }
 /*=========================
 MOBILE

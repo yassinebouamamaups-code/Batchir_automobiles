@@ -62,7 +62,6 @@
 
 </header>
 
-
 <main>
 
 
@@ -70,12 +69,7 @@
 
 <h1>Estimez la reprise de votre véhicule</h1>
 
-<p class="hero-subtitle">
-Obtenez une estimation gratuite en quelques minutes
-</p>
-
 </section>
-
 
 <section class="reprise-section">
 
@@ -89,64 +83,32 @@ Notre équipe vous recontactera rapidement avec une première évaluation.
 <p class="form-info">
 ⏱ Estimation gratuite en moins de 2 minutes
 </p>
-<form class="contact-form" 
-action="https://formsubmit.co/contact@batchirautomobiles.com" 
-method="POST">
+
+<form action="https://formspree.io/f/mpqydrvz" method="POST">
+
+<input type="text" name="immatriculation" placeholder="Immatriculation" required>
+
+<input type="text" name="marque" placeholder="Marque" required>
+
+<input type="text" name="modele" placeholder="Modèle" required>
+
+<input type="number" name="kilometrage" placeholder="Kilométrage" required>
+
+<textarea name="frais" placeholder="Frais à prévoir (rayures, pneus, entretien...)"></textarea>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="telephone" placeholder="Téléphone">
 
 <input type="hidden" name="_subject" value="Demande de reprise véhicule">
 
-<div class="form-group">
+<input type="hidden" name="_next" value="https://yassinebouamamaups-code.github.io/Batchir_automobiles/merci.html">
 
-<label>Immatriculation</label>
-<input type="text" name="Immatriculation" required>
+<button type="submit" class="btn">Estimer mon véhicule</button>
 
-</div>
-
-<div class="form-group">
-
-<label>Marque</label>
-<input type="text" name="Marque" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Modèle</label>
-<input type="text" name="Modele" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Kilométrage</label>
-<input type="number" name="Kilometrage" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Frais à prévoir</label>
-<textarea name="Frais"></textarea>
-
-</div>
-
-<div class="form-group">
-
-<label>Email</label>
-<input type="email" name="Email" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Téléphone</label>
-<input type="tel" name="Telephone">
-
-</div>
-
-<button type="submit" class="btn">
-Envoyer la demande de reprise
-</button>
+<p style="font-size:14px;color:#aaa;margin-top:10px;">
+Nous vous répondrons généralement sous 24h.
+</p>
 
 </form>
 
@@ -198,7 +160,15 @@ Toulouse, Muret, Villeneuve-Tolosane, Cugnaux et dans toute la région Occitanie
 <script>
 lucide.createIcons();
 </script>
+<script>
+const form = document.querySelector("form");
 
+form.addEventListener("submit", () => {
+setTimeout(() => {
+form.reset();
+}, 1000);
+});
+</script>
 
 </body>
 </html>
